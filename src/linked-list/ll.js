@@ -13,7 +13,7 @@ module.exports = class LinkedList {
     return this;
   }
   insertAtEnd(value) {
-    const noed = new Node(value);
+    const node = new Node(value);
     if (!this.head) {
       this.head = node;
       return this;
@@ -22,24 +22,25 @@ module.exports = class LinkedList {
     while (currentNode.next) {
       currentNode = currentNode.next;
     }
-    currentNode.next = next;
+    currentNode.next = node;
     return this;
   }
   
   find(value) {
-      if (!this.head) {
-        throw new Error('The linked list is empty');
-      }
-      if (this.head.value === value) {
+    if (!this.head) {
+      throw new Error('The linked list is empty');
+    }
+    if (this.head.value === value) {
       return this.head;
-  }
+    }
     let currentNode = this.node;
     while (currentNode.next) {
-        if (currentNode.next.value) === value {
-          return currentNode.next;
+      if (currentNode.next.value === value) {
+        return currentNode.next;
       }
       currentNode = currentNode.next;
     }
+    return null;
   }
 };
 
