@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 05 - Linked List Data Structure
-====
+[![Build Status](https://travis-ci.org/LizabethPetersen/05-linked-lists.svg?branch=master)](https://travis-ci.org/LizabethPetersen/05-linked-lists)
 
 # Lab 05 – Linked Lists and BigO Notation
  
