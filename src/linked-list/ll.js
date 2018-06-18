@@ -33,7 +33,7 @@ module.exports = class LinkedList {
     if (this.head.value === value) {
       return this.head;
     }
-    let currentNode = this.node;
+    let currentNode = this.head;
     while (currentNode.next) {
       if (currentNode.next.value === value) {
         return currentNode.next;
@@ -42,5 +42,13 @@ module.exports = class LinkedList {
     }
     return null;
   }
+  removeNode(value) {
+    if (!value) {
+      return null;
+    }
+    if (this.value >= 1) {
+      LinkedList.pop();
+    }
+    return this;
+  }
 };
-
